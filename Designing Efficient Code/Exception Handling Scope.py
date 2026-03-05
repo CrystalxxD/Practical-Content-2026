@@ -26,4 +26,3 @@ def process_data(a, b):
     finally:
         print("Function execution has finished")
     
-    return result

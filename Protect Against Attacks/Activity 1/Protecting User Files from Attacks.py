@@ -25,3 +25,7 @@ def decrypt_file(encrypted_file_path):
 # Example usage
 encrypt_file('sensitive_data.txt')
 decrypt_file('sensitive_data.txt.enc')
+
+
+
+# The code causes the item within sensitive_data.txt to be encrypted and the text is transfered into sensitive_data.txt.enc to be random string of letters.
