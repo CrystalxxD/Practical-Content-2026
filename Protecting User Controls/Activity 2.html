@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Login</h2>
+
+<input id="username" placeholder="Username">
+<input id="password" type="password" placeholder="Password">
+<button onclick="handleLogin()">Login</button>
+
+<script>
+function handleLogin() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    login(username, password);
+}
+
+function login(username, password) {
+
+    // Check login details
+    if (username === "admin" && password === "1234") {
+
+        // Generate a simple random session token
+        const token = Math.random().toString(36).substring(2);
+
+        // Store token in sessionStorage instead of localStorage
+        sessionStorage.setItem("sessionToken", token);
+
+        alert("Logged in!");
+        location.reload();
+    } else {
+        alert("Invalid login");
+    }
+}
+
+// Check for session token on page load
+if (sessionStorage.getItem("sessionToken")) {
+    document.body.innerHTML = "<h1>Welcome Admin</h1>";
+}
+</script>
+
+</body>
+</html>

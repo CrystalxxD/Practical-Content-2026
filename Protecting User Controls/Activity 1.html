@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="nameInput" placeholder="Enter your name">
+<button onclick="showName()">Submit</button>
+
+<div id="output"></div>
+
+<script>
+function showName() {
+
+    // Get the text entered by the user
+    const name = document.getElementById("nameInput").value;
+
+    // FIX: Use textContent instead of innerHTML
+    // This prevents the browser from executing HTML or scripts
+    document.getElementById("output").textContent =
+        "Welcome, " + name;
+}
+</script>
+
+</body>
+</html>
